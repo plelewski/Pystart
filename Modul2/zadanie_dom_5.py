@@ -22,3 +22,9 @@ if sorted(list_of_letters1) == sorted(list_of_letters2):
     print('Te dwa słowa są wzajemnymi anagramami')
 else:
     print('Te dwa słowa nie są wzajemnymi anagramami')
+
+# w powyższym można od razu porównać dwa stringi
+# if sorted('niedziela') == sorted('dzielenia'):
+#     print('anagramy')
+# else:
+#     print('nie anagramy')

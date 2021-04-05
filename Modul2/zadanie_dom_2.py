@@ -12,6 +12,9 @@ for i in list[::-1]:
     print(i, end='')
 print()
 
+# albo
+# print(f'Wartość w systemie binarnym: {value1:b}')
+
 # to dec
 dec_str = "10101101"
 dec_value = 0

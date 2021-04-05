@@ -12,3 +12,14 @@ if str(validation_sum)[-1] == '0':
     print('PESEL poprawny')
 else:
     print('PESEL nie jest poprawny')
+
+# lepszy sposób
+# check = '13791379131' # mnożniki dla sprawdzenia PESELu
+# control = 0
+# for index, _ in enumerate(pesel):
+#     control += int(pesel[index]) * int(check[index])
+#
+# if str(validation_sum)[-1] == '0':
+#     print('PESEL poprawny')
+# else:
+#     print('PESEL nie jest poprawny')
