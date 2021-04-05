@@ -19,7 +19,7 @@ else:
 # for index, _ in enumerate(pesel):
 #     control += int(pesel[index]) * int(check[index])
 #
-# if str(validation_sum)[-1] == '0':
+# if str(control)[-1] == '0':
 #     print('PESEL poprawny')
 # else:
 #     print('PESEL nie jest poprawny')
