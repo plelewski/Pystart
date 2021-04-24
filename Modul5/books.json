@@ -1,22 +1,28 @@
 {
-    "book": [
-        {
-            "id": "1",
-            "author": "Adam Adamkiewicz",
-            "title": "Java 2 Podstawy",
-            "pages": 200
-        },
-        {
-            "id": "2",
-            "author": "Zenek Zenkiewicz",
-            "title": "Python Rozm\u00f3wki",
-            "pages": 125
-        },
-        {
-            "id": 3,
-            "author": "Adam Mickiewicz",
-            "title": "Pan Tadeusz",
-            "pages": "300"
-        }
-    ]
+  "book": [
+    {
+      "id": "1",
+      "author": "Adam Adamkiewicz",
+      "title": "Java 2 Podstawy",
+      "pages": 200
+    },
+    {
+      "id": "2",
+      "author": "Zenek Zenkiewicz",
+      "title": "Python Rozm\u00f3wki",
+      "pages": 125
+    },
+    {
+      "id": 3,
+      "author": "Adam Mickiewicz",
+      "title": "Pan Tadeusz",
+      "pages": "300"
+    },
+    {
+      "id": 4,
+      "author": "Radek Radkowski",
+      "title": "Grube ryby",
+      "pages": "231"
+    }
+  ]
 }

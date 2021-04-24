@@ -1,0 +1,1 @@
+words = ["kajak", "hipopotam", "laptop", "zupa", "doniczka"]
