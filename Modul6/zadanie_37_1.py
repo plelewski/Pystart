@@ -21,7 +21,7 @@ john = Author('John', 'Smith', datetime('1905, 05, 15'))
 book = Book(
     'Przykładowy tytuł',
     'Kryminał',
-    [bonifacy, john],
+    ['bonifacy', 'john'],
     'opis książki',
     'streszczenie',
     4.7

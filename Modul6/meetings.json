@@ -1,12 +1,10 @@
-{
-  "meeting": [
-    {
-      "start_time": "2021.04.29 10",
-      "title": "Daily"
-    },
-    {
-      "start_time": "2021.04.29 13",
-      "title": "Jenkins KT"
-    }
-  ]
-}
+[
+  {
+    "title": "Og\u00f3rki",
+    "date": "01.05.2021 11:00"
+  },
+  {
+    "title": "Zbieranie pomidor\u00f3w",
+    "date": "01.05.2021 12:00"
+  }
+]
