@@ -2,3 +2,4 @@ venv/
 .idea/
 */pole_bitwy.py
 */.pytest_cache
+*/__pycache__
