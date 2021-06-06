@@ -1,4 +1,9 @@
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+
+class InvalidDateOfEmployment(Exception):
+    pass
 
 
 class BaseEmployee:
@@ -16,29 +21,32 @@ class BaseEmployee:
         return self.employment_time < other.employment_time
 
     def __str__(self):
-        return f'{self.f_name} {self.s_name} rozpoczął pracę: {self.hire_date} {self.employment_time}'
+        return f'{self.f_name} {self.s_name} rozpoczął pracę: {self.hire_date}'
 
-
-class Employee(BaseEmployee):
-    def __init__(self, f_name: str, s_name: str, hire_date: datetime, time_spent: int, rate: float, bonus: float):
-        super().__init__(f_name, s_name, hire_date)
-        self.bonus = bonus
-        self.rate = rate
-        self.time_spent = time_spent
-
-    def get_salary(self):
-        return f'{self.s_name},{self.f_name} dostanie: {(self.time_spent * self.rate + self.bonus):.2f} zł'
-
-    @classmethod
-    def create_fulltime(cls, f_name, s_name, hire_date, rate, bonus):
-        return cls(f_name, s_name, hire_date, 160, rate, bonus)
 
 def main():
-    emp1 = Employee('Piotr', 'Kowalski', datetime(2021, 1, 1), 145, 12, 123.45)
-    print(emp1.get_salary())
+    now = datetime.now()
+    num_of_obj = 0
+    list_of_obj = []
 
-    emp2 = Employee.create_fulltime('Adam', 'Adamowski', datetime(2021, 1, 1), 12, 123.45)
-    print(emp2.get_salary())
+    while num_of_obj < 3:
+        try:
+            fn = input('Podaj imię: ')
+            ln = input('Podaj nazwisko: ')
+            hd = datetime.strptime(input('Podaj datę rozpoczęcia pracy w formacie yyyy.mm.dd: '), '%Y.%d.%m')
+            if hd > now or relativedelta(now, hd).years > 50:
+                raise InvalidDateOfEmployment
+            be = BaseEmployee(fn, ln, hd)
+            list_of_obj.append(be)
+            num_of_obj += 1
+
+        except InvalidDateOfEmployment:
+            print('Nieprawidłowa data')
+            print()
+
+    for i in sorted(list_of_obj):
+        print(i)
+
 
 if __name__ == '__main__':
     main()
